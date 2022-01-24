@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    opacity: 0.8;
+    background: rgb(229, 229, 247) none repeat scroll 0% 0%;
+    background-image: none;
+    background-size: auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+/*container styles*/
+.card{
+    border: 1px solid red;
+    text-align: center;
+    flex-basis: 230px;
+    margin:0em 1em 2em 1em;
+    border: 4px solid #fff;
+    border-radius: .5em;
+    box-shadow: 2px 2px 8px #333;
+    background-color: #fff;
+}
+
+.container{
+    flex:5;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container_main{
+    display: flex;
+}
+
+.bg_anime{
+    display: block;
+    height: 280px;
+    width: 100%;
+    border-radius: .5em;
+    margin-bottom:1em;
+}
+
+.title,
+.list_item-title{
+    display: block;
+    line-height: 1;
+    color:#24253a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding-bottom: .3em;
+    color: rgb(0, 0, 0);
+    transition-property: color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+}
+
+.form.active > .search_input{
+    border: 3px solid red;
+}
+
+
+/*aside styles*/
+.aside{
+    position: relative;
+    left: 0;
+    flex:1;
+}
+
+.list_container-styles{
+    box-shadow: 5px 5px 3px rgb(129, 128, 128);
+    padding: .5em .8em;
+    border-radius: .2em;
+    background-color: #fff;
+    color: #111227;
+}
+
+.list_item-styles,
+.list_container-styles{
+    list-style-type: none;
+    padding-left:0;
+}
+
+.list_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list_item-styles{
+    border-bottom: 2px solid #0003;
+    margin: .6em 0;
+}
+
+
+.list_item-styles:last-child{
+    border: none;
+}
+
+.list_item-title{
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.4;
+    cursor: pointer;
+    margin-left: .2em;
+}
+
+.aside_bg_anime{
+    display: block;
+    max-width: 100%;
+    width: 50px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.div_aux{
+    display: inline-block;
+}
+
+.anime_recomm{
+    padding: 1em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.anime_recomm-text{
+    color: rgb(35, 159, 190);
+    font-size: 1.3rem;
+}
+
+/*header styles*/
+.header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: #fff;
+    background-image: url("assets/images/juan.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 2em;
+    box-shadow: 2px 2px 12px #fff2;
+}
+
+/*form styles*/
+.form{
+    position: relative;
+}
+
+.search_input{
+    border-radius: 2em;
+    padding: 1em;
+    outline: none;
+    border: none;
+    background-color: #444cf7;
+    box-shadow: 2px 2px 8px #444cf7;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search_button{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background-image: url("assets/icons/search-solid.svg");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*all the hovers effects*/
+.title:hover,
+.list_item-title:hover{
+    color: #01bcf3;
+}
+
+
+
+
+@media screen and (max-width:713px){
+    body{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .header{
+        margin-bottom: 2em;
+    }
+
+    .aside{
+        position: absolute;
+        line-height: 0;
+        visibility: hidden;
+        opacity: 1;
+    }
+}
